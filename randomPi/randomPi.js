@@ -1,11 +1,12 @@
-let radius = 250
-let points = []
+let radius
 let insideCircle
 let insideSquare
 let pi
 
 
 function setup() {
+    radius = min(250, window.innerWidth)
+    console.log(window.innerWidth)
     createCanvas(radius*2, radius*2)
     reset()
 }
