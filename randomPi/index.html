@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />    
+
+        <title> SIM - Random PI </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="../vendor/p5.min.js"></script>
+        <script src="randomPi.js"> </script>
+    </head>
+    
+    <body>         
+        <h1 id="description"> Um jeito ineficiente de aproximar π</h1>
+
+        <div class=content>
+            <div class=vertical-center>
+                <main id="main"></main>
+            </div>
+            
+            <div class=vertical-center>
+                <button id="populateBtn" onclick="populateRandom(100)"> Colocar mais pontos</button>
+                <button id="resetBtn" onclick="reset()"> Reiniciar</button>
+            </div>
+        </div>
+
+
+        <table>
+            <tr>
+                <th>Pontos no círculo:</th>
+                <th>Pontos no quadrado:</th>
+                <th>π ≈ 4 * pontosQuadrado / pontosCirculo:</th>
+            </tr>
+            
+            <tr>
+                <td id="insideCircle"> - </td>
+                <td id="insideSquare"> - </td>
+                <td id="aproximatePi"> - </td>
+            </tr>
+        </table>
+
+        <p>
+            Essa aproximação curiosa funciona porque as chances de um ponto completamente aleatório cair 
+            dento de uma forma é proporcional a sua área. Portanto a probabilidade do ponto cair no círculo é de 
+            π * r² e a de cair no quadrado é de (r*2)². Deste modo a razão entre os pontos dentro e fora do círculo será 
+            aproximadamente (π * r²) / (r² * 4) =  π / 4, ou π ≈ 4 * pontosQuadrado / pontosCirculo.
+        </p>
+
+
+    </body>
+</html> 
