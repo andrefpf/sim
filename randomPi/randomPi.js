@@ -5,7 +5,7 @@ let pi
 
 
 function setup() {
-    radius = min(250, window.innerWidth)
+    radius = min(250, window.innerWidth / 2)
     console.log(window.innerWidth)
     createCanvas(radius*2, radius*2)
     reset()
